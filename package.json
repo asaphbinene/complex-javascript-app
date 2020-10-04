@@ -4,7 +4,7 @@
   "description": "This application is about KATBIN Entreprises demo",
   "main": "App.js",
   "scripts": {
-    "watch": "start nodemon connectodb --ignore frontend-js --ignore public/ && start webpack --watch",
+    "watch": "nodemon connectodb --ignore frontend-js --ignore public/ & webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
