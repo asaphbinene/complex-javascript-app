@@ -1,0 +1,12 @@
+<!--The error messaging block of any failure-->
+<% errors.forEach(function(message) { %>
+    <div class="alert alert-danger text-center">
+        <%= message %>
+    </div>
+    <% }); %>
+        <!--The error messaging block of any success-->
+        <% success.forEach(function(message) { %>
+            <div class="alert alert-success text-center">
+                <%= message %>
+            </div>
+            <% }); %>

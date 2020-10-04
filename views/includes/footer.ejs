@@ -1,0 +1,15 @@
+        <footer class="border-top text-center small text-muted py-3">
+            <p class="m-0">Copyright &copy; <date>July, 2020</date> <a href="/" class="text-muted">MyKATBIN</a>. KATBIN Entreprises (Pty)Ltd, All rights reserved.</p>
+        </footer>
+        <% if (user) { %>
+            <div id="chat-wrapper" class="chat-wrapper shodow border-top border-left border-right"></div>
+            <script src="/socket.io/socket.io.js"></script>
+        <% } %> 
+  
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+        <script>$('[data-toggle="tooltip"]').tooltip()</script>
+        <script src="/main-bundled.js"></script>
+    </body>
+  </html>
