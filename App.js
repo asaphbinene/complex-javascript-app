@@ -14,7 +14,7 @@ app.use("/api", require("./router-api"));
 
 let katbinSessions = session({
   secret: "Je suis le mari de MadoMboli",
-  store: new KatbinMongoStore({ client: require("./db") }),
+  store: new KatbinMongoStore({ client: require("./connectodb") }),
   resave: false,
   saveUninitialized: false,
   cookie: { maxAge: 1000 * 60 * 60 * 24, httpOnly: true },
