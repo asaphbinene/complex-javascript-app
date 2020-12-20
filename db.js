@@ -1,9 +1,16 @@
-const dotenv = require('dotenv');
-dotenv.config();
-const mongoDb = require('mongodb');
+let express = require('express');
+let mongodb = require('mongodb');
+let sanitizeHTML = require('sanitize-html'); 
 
-mongoDb.connect(process.env.CONNECTIONSTRING, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, client){
-    module.exports = client;
-    const app = require('./app');
-    app.listen(process.env.PORT);
+let app = express();
+let db;
+let port = process.env.PORT
+if(port == null || port == ""){
+  port = 7329;
+}
+app.use(express.static('public'));
+let connectionString = 'mongodb+srv://katbinUser01:myKatbinUser01@Mango@cluster0.cbcb8.mongodb.net/katbinTodoApp?retryWrites=true&w=majority';
+mongodb.connect(connectionString, {useUnifiedTopology: true}, function(err, client){
+    db = client.db();
+    app.listen(port);
 });
