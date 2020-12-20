@@ -1,1 +1,1 @@
-web: node connectodb.js
+web: node db.js

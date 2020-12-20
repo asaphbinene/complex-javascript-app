@@ -1,10 +1,10 @@
 {
-  "name": "katbin-complex-app",
+  "name": "e-athene",
   "version": "1.0.0",
   "description": "This application is about KATBIN Entreprises demo",
   "main": "App.js",
   "scripts": {
-    "watch": "nodemon connectodb --ignore frontend-js --ignore public/ & webpack --watch",
+    "watch": "nodemon db --ignore frontend-js --ignore public/ & webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
